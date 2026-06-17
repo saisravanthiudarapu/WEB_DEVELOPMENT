@@ -1,0 +1,143 @@
+:root{
+    --bg-color:#f4f4f4;
+    --text-color:#222;
+    --primary-color:#0077cc;
+    --card-color:white;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:var(--bg-color);
+    color:var(--text-color);
+    line-height:1.6;
+}
+
+/* Header */
+
+header{
+    background:var(--primary-color);
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+/* Navigation */
+
+nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    background:#222;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00bfff;
+}
+
+/* Main Layout */
+
+main{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:20px;
+}
+
+/* Card Sections */
+
+section{
+    background:var(--card-color);
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Articles */
+
+article{
+    margin-top:20px;
+    padding:15px;
+    border-left:5px solid var(--primary-color);
+    background:#fafafa;
+}
+
+/* Form Styling */
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+button{
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    background:var(--primary-color);
+    color:white;
+    cursor:pointer;
+    border-radius:6px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#005fa3;
+}
+
+/* Footer */
+
+footer{
+    background:var(--primary-color);
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Tablet View */
+
+@media (min-width:768px){
+
+    main{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* Desktop View */
+
+@media (min-width:1024px){
+
+    main{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    section{
+        min-height:300px;
+    }
+
+}
